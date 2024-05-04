@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?><!--suppress NavigationFile -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/taskListFragment">
+    <activity
+        android:id="@+id/newTaskActivity2"
+        android:name="com.example.todo.NewTaskActivity"
+        android:label="activity_new_task"
+        tools:layout="@layout/activity_new_task" />
+    <fragment
+        android:id="@+id/taskListFragment"
+        android:name="com.example.todo.TaskListFragment"
+        android:label="fragment_task_list"
+        tools:layout="@layout/fragment_task_list">
+        <action
+            android:id="@+id/toNewTaskActivity"
+            app:destination="@id/newTaskActivity2" />
+        <action
+            android:id="@+id/toTaskDetailsActivity"
+            app:destination="@id/taskDetailsActivity" />
+
+    </fragment>
+    <activity
+        android:id="@+id/taskDetailsActivity"
+        android:name="com.example.todo.TaskDetailsActivity"
+        android:label="activity_task_details"
+        tools:layout="@layout/activity_task_details">
+        <argument
+            android:name="taskPosition"
+            app:argType="integer" />
+    </activity>
+</navigation>

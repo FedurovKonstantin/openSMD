@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewTaskActivity">
+
+
+    <EditText
+        android:id="@+id/taskNameTextField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:ems="10"
+        android:hint="Название задачи"
+        android:inputType="text"
+        android:text=""
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/taskDescriptionTextField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:ems="10"
+        android:hint="Описание задачи"
+        android:inputType="text"
+        android:text=""
+        app:layout_constraintTop_toBottomOf="@+id/taskNameTextField"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/createTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Создать"
+        app:layout_constraintTop_toBottomOf="@+id/taskDescriptionTextField"
+        tools:layout_editor_absoluteX="9dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
